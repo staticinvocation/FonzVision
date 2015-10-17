@@ -54,6 +54,12 @@
     <ClInclude Include="game.h">
       <Filter>Header Files\RV</Filter>
     </ClInclude>
+    <ClInclude Include="FonzUtilities.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FonzHook.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -73,6 +79,12 @@
     </ClCompile>
     <ClCompile Include="game.cpp">
       <Filter>Source Files\RV</Filter>
+    </ClCompile>
+    <ClCompile Include="FonzUtilities.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FonzHook.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
