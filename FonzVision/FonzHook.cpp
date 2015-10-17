@@ -3,6 +3,8 @@
 #include <windows.h>
 #include <stdlib.h>
 
+
+
 namespace FonzUtils
 {
 	/**
@@ -23,8 +25,7 @@ namespace FonzUtils
 		if (!prepTramp()){
 			printf("Could not prepare trampoline\n");
 			return false;
-		}
-		int iTSize = 34;
+		}		
 		return true;
 	}
 
@@ -53,6 +54,8 @@ namespace FonzUtils
 
 		VirtualProtect(pTarget, HOOK_SIZE, dwOldProtect, &dwNewProtect);
 		FlushInstructionCache(GetCurrentProcess(), pTarget, HOOK_SIZE);
+
+		free(pTCode);
 		return true;
 	}
 
@@ -107,6 +110,7 @@ namespace FonzUtils
 		unsigned char* pOrig = 0;
 		DWORD dwOldProtect;
 				
+		// Why didn't hte Fonz just virtualalloc here?  We may never know.
 		pTCode = (char*)malloc(64);
 		VirtualProtect(pTCode, 64, MEM_COMMIT | MEM_RESERVE | PAGE_EXECUTE_READWRITE, &dwOldProtect);
 

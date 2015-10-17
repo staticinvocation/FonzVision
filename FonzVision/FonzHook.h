@@ -1,10 +1,10 @@
 /*
  ** FonzHook.h 
- ** Douglas 'Douggem' Confere 2014
+ ** Douglas 'Douggem' Confere 2013
  ** dougconfere@gmail.com
  */
 
-//#include "stdafx.h"
+
 #define HOOK_SIZE 6
 namespace FonzUtils
 {
@@ -21,7 +21,7 @@ namespace FonzUtils
 		// Number of bytes that need to be overwritten in the target function
 		int iCSize;
 		// Pointer to our return point in the hooked function
-		void* returnCall;
+		void* returnCall;		
 
 		// Prepare everything for the hook without installing it
 		bool prepare();
