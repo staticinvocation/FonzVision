@@ -1,9 +1,7 @@
-
 #include "FonzHook.h"
 #include <stdio.h>
 #include <windows.h>
 #include <stdlib.h>
-extern char HookBuffer[0xFFF];
 
 namespace FonzUtils
 {
@@ -99,7 +97,6 @@ namespace FonzUtils
 			return 0;
 		}
 	}
-
 
 	bool FonzHook::prepTramp()
 	{
