@@ -4,20 +4,20 @@
 
 void D9Draw::DrawTextW(const wchar_t* text, unsigned long font, util::Color color, util::Vector2 pos) {
 	RECT tpos;
-	tpos.left = pos.x;
-	tpos.top = pos.y;
+	tpos.left = (long)pos.x;
+	tpos.top = (long)pos.y;
 
 	ID3DXFont* nativeFont = reinterpret_cast<ID3DXFont*>(font);
-	nativeFont->DrawTextW(0, text, wcslen(text), &tpos, DT_NOCLIP, D3DCOLOR_ARGB(color.a, color.r, color.g, color.b));
+	nativeFont->DrawTextW(0, text, wcslen(text), &tpos, DT_NOCLIP, color.GetD3DColor());
 }
 
 void D9Draw::DrawTextA(const char* text, unsigned long font, util::Color color, util::Vector2 pos) {
 	RECT tpos;
-	tpos.left = pos.x;
-	tpos.top = pos.y;
+	tpos.left = (long)pos.x;
+	tpos.top = (long)pos.y;
 
 	ID3DXFont* nativeFont = reinterpret_cast<ID3DXFont*>(font);
-	nativeFont->DrawTextA(0, text, strlen(text), &tpos, DT_NOCLIP, D3DCOLOR_ARGB(color.a, color.r, color.g, color.b));
+	nativeFont->DrawTextA(0, text, strlen(text), &tpos, DT_NOCLIP, color.GetD3DColor());
 }
 
 int D9Draw::TextWidth(const wchar_t* text, unsigned long font) {
@@ -46,7 +46,7 @@ void D9Draw::DrawFilledRect(int x1, int y1, int x2, int y2, util::Color color) {
 	vLine[1].y = y1 + h;
 
 	this->line->Begin();
-	this->line->Draw(vLine, 2, D3DCOLOR_ARGB(color.a, color.r, color.g, color.b));
+	this->line->Draw(vLine, 2, color.GetD3DColor());
 	this->line->End();
 }
 
@@ -59,7 +59,7 @@ void D9Draw::DrawRect(int x1, int y1, int x2, int y2, util::Color color) {
 	points[3] = D3DXVECTOR2(x1, y2);
 	points[4] = D3DXVECTOR2(x1, y1);
 	this->line->SetWidth(1);
-	this->line->Draw(points, 5, D3DCOLOR_ARGB(color.a, color.r, color.g, color.b));
+	this->line->Draw(points, 5, color.GetD3DColor());
 }
 
 void D9Draw::DrawLine(int x1, int y1, int x2, int y2, util::Color color) {
@@ -71,5 +71,5 @@ void D9Draw::DrawLine(int x1, int y1, int x2, int y2, util::Color color) {
 	lineVec[1].y = y2;
 
 	this->line->SetWidth(1);
-	this->line->Draw(lineVec, 2, D3DCOLOR_ARGB(color.a, color.r, color.g, color.b));
+	this->line->Draw(lineVec, 2, color.GetD3DColor());
 }
