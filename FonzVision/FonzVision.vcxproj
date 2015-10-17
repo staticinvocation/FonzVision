@@ -52,6 +52,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;FONZVISION_EXPORTS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>D:\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -80,8 +81,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="abstractdraw.h" />
-    <ClInclude Include="FonzHook.h" />
+	<ClInclude Include="FonzHook.h" />
     <ClInclude Include="FonzUtilities.hpp" />
+    <ClInclude Include="d11draw.h" />
+    <ClInclude Include="d9draw.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="math.h" />
     <ClInclude Include="RVBootstrap.h" />
@@ -90,7 +93,9 @@
     <ClInclude Include="util.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="FonzHook.cpp" />
+    <ClCompile Include="d9draw.cpp" />
+	<ClCompile Include="FonzUtilities.cpp" />
+	<ClCompile Include="FonzHook.cpp" />
     <ClCompile Include="dllmain.cpp">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -99,7 +104,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
       </PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="FonzUtilities.cpp" />
     <ClCompile Include="game.cpp" />
     <ClCompile Include="RVBootstrap.cpp" />
     <ClCompile Include="signature.cpp" />

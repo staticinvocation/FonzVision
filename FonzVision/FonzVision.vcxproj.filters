@@ -28,6 +28,9 @@
     <Filter Include="Source Files\RV">
       <UniqueIdentifier>{e3ca76b0-d348-44ca-a7f3-6cc82e17e62b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\framework\impl">
+      <UniqueIdentifier>{89508bda-cfa9-4b67-994a-f5174b9301fd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -54,11 +57,11 @@
     <ClInclude Include="game.h">
       <Filter>Header Files\RV</Filter>
     </ClInclude>
-    <ClInclude Include="FonzUtilities.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="d9draw.h">
+      <Filter>Header Files\framework\impl</Filter>
     </ClInclude>
-    <ClInclude Include="FonzHook.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="d11draw.h">
+      <Filter>Header Files\framework\impl</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -74,17 +77,20 @@
     <ClCompile Include="util.cpp">
       <Filter>Source Files\framework</Filter>
     </ClCompile>
+    <ClCompile Include="FonzUtilities.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FonzHook.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="RVBootstrap.cpp">
       <Filter>Source Files\RV</Filter>
     </ClCompile>
     <ClCompile Include="game.cpp">
       <Filter>Source Files\RV</Filter>
     </ClCompile>
-    <ClCompile Include="FonzUtilities.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="FonzHook.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="d9draw.cpp">
+      <Filter>Source Files\framework\impl</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
