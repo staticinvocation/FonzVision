@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "FonzHook.h"
 #include <stdio.h>
 #include <windows.h>
