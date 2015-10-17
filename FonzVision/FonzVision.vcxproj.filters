@@ -63,6 +63,12 @@
     <ClInclude Include="d11draw.h">
       <Filter>Header Files\framework\impl</Filter>
     </ClInclude>
+    <ClInclude Include="FonzHook.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FonzUtilities.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

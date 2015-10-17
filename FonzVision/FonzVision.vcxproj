@@ -41,6 +41,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -81,7 +83,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="abstractdraw.h" />
-	<ClInclude Include="FonzHook.h" />
+    <ClInclude Include="FonzHook.h" />
     <ClInclude Include="FonzUtilities.hpp" />
     <ClInclude Include="d11draw.h" />
     <ClInclude Include="d9draw.h" />
@@ -94,8 +96,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="d9draw.cpp" />
-	<ClCompile Include="FonzUtilities.cpp" />
-	<ClCompile Include="FonzHook.cpp" />
+    <ClCompile Include="FonzUtilities.cpp" />
+    <ClCompile Include="FonzHook.cpp" />
     <ClCompile Include="dllmain.cpp">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
