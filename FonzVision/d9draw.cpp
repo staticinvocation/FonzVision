@@ -34,6 +34,7 @@ unsigned long D9Draw::CreateFontA(const char* name, int size, int weight) {
 	return reinterpret_cast<long>(nativeFont);
 }
 
+
 void D9Draw::DrawFilledRect(int x1, int y1, int x2, int y2, util::Color color) {
 	int w = x2 - x1, h = y2 - y1;
 
